@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renault Nissan Shipment Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button id="toggleDarkMode">🌙 Dark Mode</button>
+    </div>
+
+    <div class="container">
+        <!-- Renault Nissan Logo -->
+        <img src="logo.png" alt="Renault Nissan Logo" class="logo">
+
+        <!-- Live Date & Time -->
+        <div class="datetime">
+            <p id="date"></p>
+            <p id="clock"></p>
+        </div>
+
+        <h1>Shipment Tracking System</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search tracking method..." />
+
+        <div class="buttons">
+            <button class="track-btn" onclick="downloadFile('manual_tracking_egypt.xlsm')">📌 Manual Tracking (Egypt)</button>
+            <button class="track-btn" onclick="downloadFile('outlook_tracking_egypt.xlsm')">📩 Outlook Based Tracking (Egypt)</button>
+            <button class="track-btn" onclick="downloadFile('database_tracking_egypt.xlsm')">💾 Database Tracking (Egypt)</button>
+            <button class="track-btn" onclick="downloadFile('outlook_tracking_rnaipl.xlsm')">📧 Outlook Based Tracking (RNAIPL)</button>
+        </div>
+        
+        <script>
+            function downloadFile(fileName) {
+                // Ensure the file is in the same directory as index.html
+                const filePath = fileName;
+
+                // Create a hidden <a> tag to download the file
+                const link = document.createElement("a");
+                link.href = filePath;
+                link.download = fileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        </script>
+        
+    </div>
+
+</body>
+</html>

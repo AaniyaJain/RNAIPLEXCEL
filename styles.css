@@ -1,0 +1,131 @@
+body {
+    background-color: #f2f2f2;  /* Light greyish background */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .track-btn {
+    background-color: #5a1e1e;  /* Dark maroon */
+    color: white;
+}
+
+.dark-mode .track-btn:hover {
+    background-color: #7a2929;
+}
+
+/* Dark Mode Button */
+.dark-mode-toggle {
+    text-align: right;
+    padding: 10px;
+}
+
+#toggleDarkMode {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #7a2929; /* Maroon */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#toggleDarkMode:hover {
+    background-color: #5a1e1e;
+}
+
+/* Logo Styling */
+.logo {
+    width: 250px;
+    margin-top: 20px;
+}
+
+/* Live Date & Time */
+.datetime {
+    font-size: 18px;
+    color: #7a2929;  /* Maroon */
+    margin-top: 10px;
+}
+
+/* Page Title */
+h1 {
+    color: #7a2929;  /* Maroon */
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+/* Search Bar */
+#searchBar {
+    width: 50%;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    font-size: 16px;
+    border: 2px solid #7a2929;  /* Maroon */
+    border-radius: 5px;
+}
+
+/* Button Container */
+.buttons {
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.track-btn {
+    display: block;
+    width: 350px;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: #7a2929; /* Maroon */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Button Hover & Click Effects */
+.track-btn:hover {
+    background-color: #5a1e1e;  /* Darker Maroon */
+}
+
+.track-btn:active {
+    transform: scale(0.95);
+}
+
+/* Tooltip on Hover */
+.track-btn:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #searchBar {
+        width: 80%;
+    }
+    .track-btn {
+        width: 80%;
+    }
+} 
